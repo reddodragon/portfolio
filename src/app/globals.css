@@ -3,25 +3,54 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+    :root {
+        --foreground-rgb: 255, 255, 255;
+        --background-start-rgb: 0, 0, 0;
+        --background-end-rgb: 0, 0, 0;
+    }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    color: rgb(var(--foreground-rgb));
+    background: linear-gradient(
+            to bottom,
+            transparent,
+            rgb(var(--background-end-rgb))
+        )
+        rgb(var(--background-start-rgb));
 }
+
+.shadow-f {
+    box-shadow: 0px 18px 36px -18px rgba(0, 0, 0, 0.3) inset,
+        0px 30px 60px -12px rgba(50, 50, 93, 0.25) inset;
+    transition: box-shadow 0.5s ease-in-out; /* Añadir transición para aplicar la sombra */
+}
+
+.shadow-f:hover {
+    box-shadow: none;
+    transition: box-shadow 0.5s ease-in-out; /* Añadir transición para quitar la sombra */
+}
+.shadow-f :first-child{
+transition: box-shadow 0.5s ease-in-out; /* Añadir transición para aplicar la sombra */
+}
+.shadow-f:hover :first-child{
+  box-shadow: none;
+  transition: box-shadow 0.5s ease-in-out; /* Añadir transición para quitar la sombra */
+}
+
+.shadow-img {
+    box-shadow: 0px 1.18178px 2.85018px 0px rgba(0, 0, 0, 0.06),
+        0px 2.74774px 6.62689px 0px rgba(0, 0, 0, 0.09),
+        0px 4.9343px 11.90037px 0px rgba(0, 0, 0, 0.12),
+        0px 8.18911px 19.7502px 0px rgba(0, 0, 0, 0.13),
+        0px 13.49128px 32.53779px 0px rgba(0, 0, 0, 0.16),
+        0px 23.57885px 56.86663px 0px rgba(0, 0, 0, 0.19),
+        0px 51px 123px 0px rgba(0, 0, 0, 0.25);
+}
+
