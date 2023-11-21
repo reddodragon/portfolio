@@ -1,4 +1,7 @@
 "use client";
+import GithubIcon from "@/components/icons/Github";
+import InstagramIcon from "@/components/icons/Instagram";
+import LinkedinIcon from "@/components/icons/Linkedin";
 import { useState, ChangeEvent, FormEvent } from "react";
 
 interface FormData {
@@ -153,7 +156,7 @@ export default function Contact() {
                                 <button
                                     type="submit"
                                     disabled={loading}
-                                    className="bg-blue-500 text-white p-2 rounded-md hover:bg-blue-700"
+                                    className="bg-cyan-800 text-white p-2 rounded-md hover:bg-blue-700"
                                 >
                                     {loading ? "Enviando..." : "Enviar"}
                                 </button>
@@ -161,28 +164,28 @@ export default function Contact() {
                         </form>
                         <div className="mt-8 flex justify-between">
                             <a
-                                href="https://www.linkedin.com/"
+                                href="https://www.linkedin.com/in/federico-ameratte-7879b11ab/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-white hover:underline"
                             >
-                                LinkedIn
+                                <LinkedinIcon/>
                             </a>
                             <a
-                                href="https://github.com/"
+                                href="https://github.com/reddodragon"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-white hover:underline"
                             >
-                                GitHub
+                                <GithubIcon/>
                             </a>
                             <a
-                                href="https://www.instagram.com/"
+                                href="https://www.instagram.com/fedefe._/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-white hover:underline"
                             >
-                                Instagram
+                                <InstagramIcon/>
                             </a>
                         </div>
                     </div>

@@ -44,10 +44,28 @@ export default function About() {
                         </div>
                         <div className="flex shadow-f flex-col items-center rounded-lg bg-gradient-to-br from-blue-500 via-teal-300 to-teal-500 p-4">
                             <span className="text-white font-bold">
-                                Tailwind CSS
+                                Tailwind 
                             </span>
                         </div>
-                        {/* Agrega más elementos según sea necesario */}
+                        <div className="flex shadow-f flex-col items-center rounded-lg bg-gradient-to-r from-yellow-500 to-red-500 p-4">
+                            <span className="text-white font-bold">
+                                Firebase
+                            </span>
+                        </div>
+                        <div className="flex shadow-f flex-col items-center rounded-lg bg-gradient-to-r from-purple-700 to-indigo-600 p-4">
+                            <span className="text-white font-bold">
+                                Boostrap
+                            </span>
+                        </div>
+                        <div className="flex shadow-f flex-col items-center rounded-lg bg-gradient-to-r from-blue-500 to-indigo-900 p-4">
+                            <span className="text-white font-bold">
+                                CSS
+                            </span>
+                        </div>
+
+                        
+
+
                     </div>
                 </div>
             </div>

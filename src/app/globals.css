@@ -16,15 +16,7 @@
     }
 }
 
-body {
-    color: rgb(var(--foreground-rgb));
-    background: linear-gradient(
-            to bottom,
-            transparent,
-            rgb(var(--background-end-rgb))
-        )
-        rgb(var(--background-start-rgb));
-}
+
 
 .shadow-f {
     box-shadow: 0px 18px 36px -18px rgba(0, 0, 0, 0.3) inset,
@@ -53,4 +45,20 @@ transition: box-shadow 0.5s ease-in-out; /* Añadir transición para aplicar la 
         0px 23.57885px 56.86663px 0px rgba(0, 0, 0, 0.19),
         0px 51px 123px 0px rgba(0, 0, 0, 0.25);
 }
+
+
+.scroll::-webkit-scrollbar {
+    width: 12px;  
+    margin: 2px;             /* width of the entire scrollbar */
+  }
+  
+  .scroll::-webkit-scrollbar-track {
+    background: rgba(255, 166, 0, 0);        /* color of the tracking area */
+  }
+  
+  .scroll::-webkit-scrollbar-thumb {
+    background-color: #110d07b9;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid rgba(255, 166, 0, 0);  /* creates padding around scroll thumb */
+  }
 

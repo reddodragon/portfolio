@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Home() {
     return (
-        <main className="h-screen">
+        <main className="h-screen bg-[#000814]">
             <div className="flex flex-col items-center pt-10">
                 <h1 className="text-3xl font-semibold">Federico Ameratte</h1>
                 <h2 className="text-xl font-light ">Front-end deveeloper</h2>
