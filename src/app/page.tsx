@@ -1,3 +1,6 @@
+import AboutIcon from "@/components/icons/AboutIcon";
+import CodeIcon from "@/components/icons/CodeIcon";
+import ContactIcon from "@/components/icons/Contact";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -31,15 +34,26 @@ export default function Home() {
 
                 <div className="sm:w-1/2 flex flex-col gap-5 sm:gap-0 justify-between">
                     <div className="flex justify-between gap-5 sm:gap-10 sm:h-2/5">
-                        <Link href="/work" className="shadow-f bg-gradient-to-r from-teal-400 to-indigo-900  w-1/2 rounded-2xl p-7 sm:p-5">
-                            <p className=" font-semibold text-xl text-[#1d1d1d]">Work</p>
+                        <Link href="/work" className="shadow-f intense-shadow bg-gradient-to-r from-teal-400 to-indigo-900  w-1/2 rounded-2xl p-7 sm:p-5">
+                            <div className="flex  justify-between">
+                                <span className=" font-semibold text-xl text-[#1d1d1d]">Work</span>
+                                <CodeIcon/>
+
+                            </div>
                         </Link>
-                        <Link href="/about" className="shadow-f bg-gradient-to-r from-yellow-200 to-yellow-600  w-1/2 rounded-2xl p-7 sm:p-5">
-                            <p className=" font-semibold text-xl text-[#1d1d1d]">Sobre mi</p>
+                        <Link href="/about" className="shadow-f intense-shadow bg-gradient-to-r from-yellow-200 to-yellow-600  w-1/2 rounded-2xl p-7 sm:p-5">
+                            <div className="flex items-center justify-between">
+                                <span className=" font-semibold text-xl text-[#1d1d1d]">About</span>
+                                <AboutIcon/>
+                            </div>
                         </Link>
                     </div>
-                    <Link href={"/contact"} className="shadow-f bg-gradient-to-r from-indigo-300 to-indigo-100  sm:h-2/5 rounded-2xl p-7 sm:p-5">
-                        <p className=" font-semibold text-xl text-[#1d1d1d]">Contactame</p>
+                    <Link href={"/contact"} className="shadow-f intense-shadow bg-gradient-to-r from-indigo-300 to-indigo-100  sm:h-2/5 rounded-2xl p-7 sm:p-5">
+                        <div  className="flex items-center  justify-between">
+                            <span className=" font-semibold text-xl text-[#1d1d1d]">Contactame</span>
+                            <ContactIcon/>
+
+                        </div>
                     </Link>
                 </div>
             </div>

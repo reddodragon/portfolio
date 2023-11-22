@@ -156,7 +156,7 @@ export default function Contact() {
                                 <button
                                     type="submit"
                                     disabled={loading}
-                                    className="bg-gradient-to-r from-yellow-500 to-red-500 text-white p-2 w-full sm:w-3/5 sm:px-5 font-semibold text-xl rounded-md hover:bg-blue-700"
+                                    className=" intense-shadow bg-gradient-to-r from-yellow-500 to-red-500 text-white p-2 w-full sm:w-3/5 sm:px-5 font-semibold text-xl rounded-md hover:bg-blue-700"
                                 >
                                     {loading ? "Enviando..." : "Enviar"}
                                 </button>

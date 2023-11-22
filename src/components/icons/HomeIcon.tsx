@@ -1,19 +1,24 @@
 const HomeIcon: React.FC = () => {
-    return (
-      <svg
-        width="40px"
-        height="40px"
-        viewBox="0 0 32 32"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <g fill="none" fillRule="evenodd">
-          <path d="m0 0h32v32h-32z" />
-          <path
-            d="m19.5548639 2.6028224 8.9944388 6.59912643c1.5405939 1.13031777 2.4506973 2.92683637 2.4506973 4.83760787v11.9604433c0 3.3137085-2.6862915 6-6 6h-18c-3.3137085 0-6-2.6862915-6-6v-11.958697c0-1.9117507.91103125-3.7090683 2.45293825-4.83925127l9.00556125-6.60087271c2.1123042-1.54827125 4.9847775-1.54760604 7.0963644.00164338zm-3.5548639 13.3971776c-2.209139 0-4 1.790861-4 4v3c0 .5522847.4477153 1 1 1h6c.5522847 0 1-.4477153 1-1v-3c0-2.209139-1.790861-4-4-4z"
-            fill="#000000"
-          />
-        </g>
-      </svg>
+  return (
+    <svg
+      height={40}
+      width={40}
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+      <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
+      <g id="SVGRepo_iconCarrier">
+        <path
+          d="M19 7.90637V18C19 19.1046 18.1046 20 17 20H7C5.89543 20 5 19.1046 5 18V7.90637M2 10.0001L10.8531 3.80297C11.5417 3.32092 12.4583 3.32092 13.1469 3.80297L22 10.0001"
+          stroke="#000000"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        ></path>
+      </g>
+    </svg>
     );
   };
   
