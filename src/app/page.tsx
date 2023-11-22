@@ -32,14 +32,14 @@ export default function Home() {
                 <div className="w-1/2 flex flex-col justify-between">
                     <div className="flex justify-between gap-10 h-2/5">
                         <Link href="/work" className="shadow-f bg-gradient-to-r from-teal-400 to-indigo-900  w-1/2 rounded-2xl p-5">
-                            <p className=" text-[#757575]">Work</p>
+                            <p className=" font-semibold text-xl text-[#1d1d1d]">Work</p>
                         </Link>
                         <Link href="/about" className="shadow-f bg-gradient-to-r from-yellow-200 to-yellow-600  w-1/2 rounded-2xl p-5">
-                            <p className=" text-[#757575] ml-1">Sobre mi</p>
+                            <p className=" font-semibold text-xl text-[#1d1d1d]">Sobre mi</p>
                         </Link>
                     </div>
                     <Link href={"/contact"} className="shadow-f bg-gradient-to-r from-indigo-300 to-indigo-100  h-2/5 rounded-2xl p-5">
-                        <p className=" text-[#757575]">Contactame</p>
+                        <p className=" font-semibold text-xl text-[#1d1d1d]">Contactame</p>
                     </Link>
                 </div>
             </div>
