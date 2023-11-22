@@ -24,22 +24,30 @@ const NavBar: React.FC = () => {
     <>
       {isOpen && (
         <div
-          className="fixed  bg-black opacity-50 z-50 "
+          className="fixed  bg-black opacity-50 "
           onClick={closeNav}
         ></div>
       )}
 
       <div
         id="navbar"
-        className={`fixed h-full font-semibold text-xl text-[#1d1d1d] w-0 overflow-x-hidden z-40 transition-all duration-500 ease-in-out ${
+        className={`fixed h-full font-semibold text-xl text-[#1d1d1d] w-0 z-10 overflow-x-hidden  transition-all duration-500 ease-in-out ${
           isOpen ? "w-48" : ""
         }`}
       >
+              <div className="fixed transition-all duration-500 ease-in-out">
+        <button
+          className="open-btn rounded-full bg-gray-800 text-white  p-3 mt-4 ml-2 sm:ml-4"
+          onClick={toggleNav}
+        >
+          {isOpen ? <IconClose /> : <IconoMenu />}
+        </button>
+      </div>
         <div className="flex flex-col justify-center w-full h-full gap-5">
         <Link
             onClick={() => closeNav()}
             href="/"
-            className="shadow-f flex justify-center bg-gradient-to-r  from-blue-500 to-indigo-900  rounded-2xl p-4 text-center"
+            className="shadow-f flex justify-center bg-gradient-to-r z-50  from-blue-500 to-indigo-900  rounded-2xl p-4 text-center"
             
           >
             <HomeIcon/>
@@ -68,14 +76,7 @@ const NavBar: React.FC = () => {
         </div>
       </div>
 
-      <div className="fixed transition-all duration-500 ease-in-out">
-        <button
-          className="open-btn rounded-full bg-gray-800 text-white p-3 mt-4 ml-4"
-          onClick={toggleNav}
-        >
-          {isOpen ? <IconClose /> : <IconoMenu />}
-        </button>
-      </div>
+
     </>
   );
 };

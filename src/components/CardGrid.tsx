@@ -9,7 +9,7 @@ interface CardGridProps {
 const CardGrid: React.FC<CardGridProps> = ({ data }) => {
   return (
 <div
-  className=" scroll grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 z-10  p-5 rounded-3xl h-4/5 overflow-y-auto "
+  className=" scroll grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-5 rounded-3xl sm:h-4/5 overflow-y-auto "
 >
   {data.map((card, index) => (
     <Card key={index} {...card} />

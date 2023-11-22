@@ -50,8 +50,8 @@ const cardData: CardData[] = [
 
 const App: React.FC = () => {
     return (
-        <div className="container w-4/5 pt-10 h-screen mx-auto flex flex-col items-center ">
-            <h1 className="text-3xl font-bold mb-4">My Projects</h1>
+        <div className="container sm:w-4/5 pt-5 h-screen mx-auto flex flex-col items-center ">
+            <h1 className="text-3xl font-bold mb-4">Mis trabajos</h1>
             <CardGrid data={cardData} />
         </div>
     );

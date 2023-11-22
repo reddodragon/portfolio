@@ -6,8 +6,8 @@ export default function About() {
                 <h2 className="text-xl font-light">Front-end Developer</h2>
             </div>
 
-            <div className="flex flex-col items-center mt-5">
-                <div className="flex flex-col items-center w-1/2 bg-gradient-to-r from-purple-500 to-purple-900 rounded-2xl p-10">
+            <div className="flex flex-col items-center m-5 sm:m-0 sm:mt-5">
+                <div className="flex flex-col items-center sm:w-1/2 bg-gradient-to-r from-purple-500 to-purple-900 rounded-2xl p-5 sm:p-10">
                     <h3 className="text-2xl font-semibold">Sobre mí</h3>
                     <p className="mt-3">
                         Soy un desarrollador front-end apasionado residente de
@@ -21,9 +21,9 @@ export default function About() {
                     </p>
                 </div>
 
-                <div className="mt-10 flex items-center flex-col">
+                <div className="mt-3 sm:mt-10 flex items-center flex-col">
                     <h3 className="text-2xl font-semibold">Tecnologías</h3>
-                    <div className="mt-3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    <div className="m-3 grid grid-cols-3 lg:grid-cols-4 gap-4">
                         <div className="flex shadow-f flex-col items-center rounded-lg bg-gradient-to-r from-blue-500 to-indigo-900 p-4">
                             <span className="text-white font-bold">React</span>
                         </div>

@@ -95,9 +95,9 @@ export default function Contact() {
     };
     return (
         <main className=" h-screen">
-            <div className="flex flex-col items-center pt-10">
-                <h2 className="text-xl font-light text-white">
-                    ¡Contáctame para más información!
+            <div className="flex flex-col items-center pt-5">
+                <h2 className="text-3xl font-semibold text-white">
+                    Contáctame
                 </h2>
             </div>
 
@@ -114,7 +114,7 @@ export default function Contact() {
             )}
 
             <div className="flex justify-center mt-5">
-                <div className="w-1/2">
+                <div className="sm:w-1/2 p-5 sm:p-0">
                     <div className="w-full shadow-f bg-gradient-to-r from-blue-500 to-indigo-900 rounded-2xl p-10">
                         <form onSubmit={handleSubmit} className="grid gap-6">
                             <div>
@@ -126,7 +126,7 @@ export default function Contact() {
                                     id="name"
                                     name="name"
                                     onChange={handleChange}
-                                    className="mt-1 p-2 w-full rounded-md bg-[#000814] text-white  focus:outline-none "
+                                    className="mt-1 p-2 h-12 w-full rounded-md bg-[#000814] text-white  focus:outline-none "
                                 />
                             </div>
                             <div>
@@ -138,7 +138,7 @@ export default function Contact() {
                                     id="email"
                                     name="email"
                                     onChange={handleChange}
-                                    className="mt-1 p-2 w-full rounded-md bg-[#000814] text-white  focus:outline-none "
+                                    className="mt-1 p-2 h-12 w-full rounded-md bg-[#000814] text-white  focus:outline-none "
                                 />
                             </div>
                             <div>
@@ -149,14 +149,14 @@ export default function Contact() {
                                     id="message"
                                     name="message"
                                     onChange={handleChange}
-                                    className="mt-1 p-2 w-full rounded-md bg-[#000814] text-white focus:outline-none "
+                                    className="mt-1 h-20 sm:h-24 p-2 w-full rounded-md bg-[#000814] text-white focus:outline-none "
                                 ></textarea>
                             </div>
-                            <div>
+                            <div className="flex justify-center">
                                 <button
                                     type="submit"
                                     disabled={loading}
-                                    className="bg-cyan-800 text-white p-2 rounded-md hover:bg-blue-700"
+                                    className="bg-gradient-to-r from-yellow-500 to-red-500 text-white p-2 w-full sm:w-3/5 sm:px-5 font-semibold text-xl rounded-md hover:bg-blue-700"
                                 >
                                     {loading ? "Enviando..." : "Enviar"}
                                 </button>
