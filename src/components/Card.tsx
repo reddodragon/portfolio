@@ -39,7 +39,7 @@ const Card: React.FC<CardProps> = ({ title, imageUrl, technologies, github, link
                 height={300}
                 width={300}
                 alt={title}
-                className="w-full h-auto rounded-t-3xl"
+                className="w-full h-auto rounded-t-xl"
             />
             <a href={github} className={`absolute top-0 left-0 m-4  bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-10 p-1 rounded-full   hover:bg-opacity-70 hover:shadow-xl`}>
                 <GithubIcon height={30} width={30} />
@@ -47,13 +47,13 @@ const Card: React.FC<CardProps> = ({ title, imageUrl, technologies, github, link
             <a href={link} className="absolute top-0 right-0 m-4  bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-10 p-1 rounded-full hover:bg-opacity-70 hover:shadow-md">
                 <LinkIcon height={30} width={30}/>
             </a>
-            <div className="flex flex-col text-black justify-center items-center w-full rounded-b-3xl bg-gradient-to-r from-blue-300 to-purple-300">
-                <h2 className="text-xl font-semibold my-3">{title}</h2>
+            <div className="flex flex-col justify-center items-center w-full rounded-b-xl glass">
+                <h2 className="text-xl drop-shadow-xl font-semibold my-3">{title}</h2>
                 <div className="flex flex-wrap">
                     {technologies.map((tech, index) => (
                         <span
                             key={index}
-                            className={`text-white px-2 py-1 rounded-full mr-2 mb-2 shadow-md ${getTechnologyBackground(
+                            className={`text-white sm:text-sm px-2 sm:px-1 py-1 rounded-md mr-2 mb-2 shadow-md ${getTechnologyBackground(
                                 tech
                             )}`}
                         >

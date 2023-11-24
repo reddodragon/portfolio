@@ -16,7 +16,76 @@
     }
 }
 
+.patterns {
+    height: 100vh;
+}
 
+.svg {
+    font-family: Lora;
+    letter-spacing: 10px;
+    stroke: url(#my-cool-gradient);
+    font-size: 5vw;
+    stroke-width: 1;
+    animation: textAnimate 5s infinite alternate;
+}
+
+@media (max-width: 640px) {
+  .svg{
+    font-size: 20vw;
+  }
+}
+
+@keyframes textAnimate {
+    0% {
+        stroke-dasharray: 0 50%;
+        stroke-dashoffset: 20%;
+        stroke-linecap: round;
+        stroke-width: 0.5;
+        fill: hsla(0, 0%, 100%, 0.344);
+    }
+
+    100% {
+        stroke-dasharray: 50% 0;
+        stroke-dashoffset: -20%;
+        stroke-linecap: round;
+        fill: hsla(0, 0%, 100%, 0);
+    }
+}
+
+.animate-element > div {
+    opacity: 0;
+    transition: opacity 0s, transform 0.3s;
+}
+
+/* Regla para aplicar la animación cuando el contenedor tiene hover */
+.animate-element:hover > div {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Animación específica cuando se aplica el hover */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 640px) {
+    .animate-element > div {
+        opacity: 1; /* Ajusta según tus necesidades */
+    }
+}
+
+/* Aplicar la animación cuando se tiene hover */
+.animate-element:hover > div {
+    animation: fadeIn 0.3s ease-in-out;
+}
 
 .shadow-f {
     box-shadow: 0px 18px 36px -18px rgba(0, 0, 0, 0.3) inset,
@@ -28,12 +97,12 @@
     box-shadow: none;
     transition: box-shadow 0.5s ease-in-out; /* Añadir transición para quitar la sombra */
 }
-.shadow-f :first-child{
-transition: box-shadow 0.5s ease-in-out; /* Añadir transición para aplicar la sombra */
+.shadow-f :first-child {
+    transition: box-shadow 0.5s ease-in-out; /* Añadir transición para aplicar la sombra */
 }
-.shadow-f:hover :first-child{
-  box-shadow: none;
-  transition: box-shadow 0.5s ease-in-out; /* Añadir transición para quitar la sombra */
+.shadow-f:hover :first-child {
+    box-shadow: none;
+    transition: box-shadow 0.5s ease-in-out; /* Añadir transición para quitar la sombra */
 }
 
 .shadow-img {
@@ -46,32 +115,141 @@ transition: box-shadow 0.5s ease-in-out; /* Añadir transición para aplicar la 
         0px 51px 123px 0px rgba(0, 0, 0, 0.25);
 }
 
-
 .scroll::-webkit-scrollbar {
-    width: 12px;  
-    margin: 2px;             /* width of the entire scrollbar */
-  }
-  
-  .scroll::-webkit-scrollbar-track {
-    background: rgba(255, 166, 0, 0);        /* color of the tracking area */
-  }
-  
-  .scroll::-webkit-scrollbar-thumb {
-    background-color: #110d07b9;    /* color of the scroll thumb */
-    border-radius: 20px;       /* roundness of the scroll thumb */
-    border: 3px solid rgba(255, 166, 0, 0);  /* creates padding around scroll thumb */
-  }
+    width: 12px;
+    margin: 2px; /* width of the entire scrollbar */
+}
 
+.scroll::-webkit-scrollbar-track {
+    background: rgba(255, 166, 0, 0); /* color of the tracking area */
+}
 
-  .intense-shadow:active,
-  .intense-shadow:focus {
-      box-shadow: 0px 18px 36px -18px rgba(0, 0, 0, 0.8) inset,
-                  0px 30px 100px -12px rgba(50, 50, 93, 0.6) inset;
-      transition: box-shadow 0.2s ease-in-out; /* Puedes ajustar la duración de la transición si lo deseas */
-  }
+.scroll::-webkit-scrollbar-thumb {
+    background-color: #110d07b9; /* color of the scroll thumb */
+    border-radius: 20px; /* roundness of the scroll thumb */
+    border: 3px solid rgba(255, 166, 0, 0); /* creates padding around scroll thumb */
+}
 
-  .active{
+.intense-shadow:active,
+.intense-shadow:focus {
     box-shadow: 0px 18px 36px -18px rgba(0, 0, 0, 0.8) inset,
-                0px 30px 100px -12px rgba(50, 50, 93, 0.6) inset;
+        0px 30px 100px -12px rgba(50, 50, 93, 0.6) inset;
     transition: box-shadow 0.2s ease-in-out; /* Puedes ajustar la duración de la transición si lo deseas */
+}
+
+.active {
+    box-shadow: 0px 18px 36px -18px rgba(0, 0, 0, 0.8) inset,
+        0px 30px 100px -12px rgba(50, 50, 93, 0.6) inset;
+    transition: box-shadow 0.2s ease-in-out; /* Puedes ajustar la duración de la transición si lo deseas */
+}
+
+.glass {
+  background: rgba( 255, 255, 255, 0.15 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 2px );
+  -webkit-backdrop-filter: blur( 2px );
+}
+
+.fancy {
+ background-color: transparent;
+ border: 2px solid #000;
+ border-radius: 10px;
+ box-sizing: border-box;
+ color: #fff;
+ cursor: pointer;
+ display: inline-block;
+ font-weight: 700;
+ letter-spacing: 0.05em;
+ margin: 0;
+ outline: none;
+ overflow: visible;
+ padding: 1.25em 2em;
+ position: relative;
+ text-align: center;
+ text-decoration: none;
+ text-transform: none;
+ transition: all 0.3s ease-in-out;
+ user-select: none;
+ font-size: 13px;
+}
+
+.fancy::before {
+ content: " ";
+ width: 1.5625rem;
+ height: 2px;
+ background: black;
+ top: 50%;
+ left: 1.5em;
+ position: absolute;
+ transform: translateY(-50%);
+ transform-origin: center;
+ transition: background 0.3s linear, width 0.3s linear;
+}
+
+.fancy .text {
+ font-size: 1.125em;
+ line-height: 1.33333em;
+ padding-left: 2em;
+ display: block;
+ text-align: left;
+ transition: all 0.3s ease-in-out;
+ text-transform: uppercase;
+ text-decoration: none;
+ color: black;
+}
+
+.fancy .top-key {
+ height: 2px;
+ width: 1.5625rem;
+ top: -2px;
+ left: 0.625rem;
+ position: absolute;
+ background: #ffffffa5;
+ transition: width 0.5s ease-out, left 0.3s ease-out;
+}
+
+.fancy .bottom-key-1 {
+ height: 2px;
+ width: 1.5625rem;
+ right: 1.875rem;
+ bottom: -2px;
+ position: absolute;
+ background: #ffffffa5;
+ transition: width 0.5s ease-out, right 0.3s ease-out;
+}
+
+.fancy .bottom-key-2 {
+ height: 2px;
+ width: 0.625rem;
+ right: 0.625rem;
+ bottom: -2px;
+ position: absolute;
+ background: #ffffffa5;
+ transition: width 0.5s ease-out, right 0.3s ease-out;
+}
+
+.fancy:hover {
+ color: white;
+ background: black;
+}
+
+.fancy:hover::before {
+ width: 0.9375rem;
+ background: white;
+}
+
+.fancy:hover .text {
+ color: white;
+ padding-left: 1.5em;
+}
+
+.fancy:hover .top-key {
+ left: -2px;
+ width: 0px;
+}
+
+.fancy:hover .bottom-key-1,
+ .fancy:hover .bottom-key-2 {
+ right: 0;
+ width: 0;
 }

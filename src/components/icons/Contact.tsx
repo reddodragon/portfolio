@@ -1,13 +1,13 @@
 const ContactIcon: React.FC = () => {
     return (
       <svg
-        width="40px"
-        height="40px"
+        width="25px"
+        height="25px"
         viewBox="0 0 32 32"
         xmlns="http://www.w3.org/2000/svg"
       >
         <style type="text/css">
-          {`.linesandangles_een{fill:#111918;}`}
+          {`.linesandangles_een{fill:#ffffff;}`}
         </style>
         <path
           className="linesandangles_een"
