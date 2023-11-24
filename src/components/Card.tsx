@@ -35,7 +35,7 @@ const Card: React.FC<CardProps> = ({ title, imageUrl, technologies, github, link
     return (
         <div className="relative">
             <Image
-                src={`/img/pages/${imageUrl}`}
+                src={imageUrl}
                 height={300}
                 width={300}
                 alt={title}

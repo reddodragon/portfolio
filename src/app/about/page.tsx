@@ -2,7 +2,7 @@ export default function About() {
     return (
         <main        
         style={{
-            backgroundImage: 'url("/img/space2.jpg")',
+            backgroundImage: 'url("https://ibb.co/GpHVTwD")',
             backgroundSize: "cover",
             backgroundPosition: "center",
             minHeight: "100vh", // Establecer la altura al 100% de la altura de la pantalla

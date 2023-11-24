@@ -96,7 +96,7 @@ export default function Contact() {
     return (
         <main
             style={{
-                backgroundImage: 'url("/img/space3.jpg")',
+                backgroundImage: 'url("https://ibb.co/vLS6zWb")',
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 minHeight: "100vh", // Establecer la altura al 100% de la altura de la pantalla
