@@ -8,15 +8,14 @@ interface CardProps {
     technologies: string[];
     github: string;
     link: string;
-
-
 }
 
 const getTechnologyBackground = (technology: string): string => {
     // Mapeo de tecnologías a clases de fondo
     const backgroundMap: { [key: string]: string } = {
         react: "bg-gradient-to-r from-blue-500 to-indigo-900",
-        javascript: "bg-gradient-to-br from-yellow-500 via-yellow-400 to-yellow-600",
+        javascript:
+            "bg-gradient-to-br from-yellow-500 via-yellow-400 to-yellow-600",
         node: "bg-gradient-to-r from-green-500 to-green-900",
         next: "bg-gradient-to-r from-black to-gray-700",
         tailwind: "bg-gradient-to-br from-blue-500 via-teal-300 to-teal-500",
@@ -31,24 +30,39 @@ const getTechnologyBackground = (technology: string): string => {
     );
 };
 
-const Card: React.FC<CardProps> = ({ title, imageUrl, technologies, github, link }) => {
+const Card: React.FC<CardProps> = ({
+    title,
+    imageUrl,
+    technologies,
+    github,
+    link,
+}) => {
     return (
         <div className="relative">
             <Image
-                src={imageUrl}
-                height={300}
-                width={300}
+                src={`/img/pages/${imageUrl}`}
                 alt={title}
-                className="w-full h-auto rounded-t-xl"
+                width={300}
+                height={300}
+                layout="fixed"
+                className="w-full h-auto object-container rounded-t-xl"
             />
-            <a href={github} className={`absolute top-0 left-0 m-4  bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-10 p-1 rounded-full   hover:bg-opacity-70 hover:shadow-xl`}>
+            <a
+                href={github}
+                className={`absolute top-0 left-0 m-4  bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-10 p-1 rounded-full   hover:bg-opacity-70 hover:shadow-xl`}
+            >
                 <GithubIcon height={30} width={30} />
             </a>
-            <a href={link} className="absolute top-0 right-0 m-4  bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-10 p-1 rounded-full hover:bg-opacity-70 hover:shadow-md">
-                <LinkIcon height={30} width={30}/>
+            <a
+                href={link}
+                className="absolute top-0 right-0 m-4  bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-10 p-1 rounded-full hover:bg-opacity-70 hover:shadow-md"
+            >
+                <LinkIcon height={30} width={30} />
             </a>
             <div className="flex flex-col justify-center items-center w-full rounded-b-xl glass">
-                <h2 className="text-xl drop-shadow-xl font-semibold my-3">{title}</h2>
+                <h2 className="text-xl drop-shadow-xl font-semibold my-3">
+                    {title}
+                </h2>
                 <div className="flex flex-wrap">
                     {technologies.map((tech, index) => (
                         <span

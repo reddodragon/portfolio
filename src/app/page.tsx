@@ -15,7 +15,7 @@ export default function Home() {
             <div className="patterns flex">
                 <div
                     style={{
-                        backgroundImage: 'url("https://i.ibb.co/ydJbnQP/space5.png")',
+                        backgroundImage: 'url("/img/space4.jpg")',
                         backgroundSize: "cover",
                         backgroundPosition: "center",
                     }}

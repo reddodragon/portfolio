@@ -40,7 +40,7 @@ const Menu: React.FC = () => {
   return (
     <>
       <button
-        className="absolute z-20 top-4 left-4 text-white"
+        className="fixed z-20 top-4 left-4 text-white"
         onClick={toggleMenu}
       >
         {menuOpen ? <IconClose /> : <IconMenu />}
@@ -48,7 +48,7 @@ const Menu: React.FC = () => {
 
       {menuOpen && (
         <div className="fixed z-10 bg-black bg-opacity-90 sm:bg-opacity-0 w-4/5 sm:w-auto sm:left-10 flex flex-col justify-center h-full text-white pl-10 sm:pl-4 p-4">
-          <div className="list-none flex flex-col text-3xl sm:text-xl gap-6 sm:gap-4">
+          <div className=" flex flex-col text-3xl sm:text-xl gap-6 sm:gap-4">
             <MenuItem
               itemName="Home"
               href="/"
